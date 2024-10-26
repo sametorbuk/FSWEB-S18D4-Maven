@@ -1,6 +1,6 @@
 package com.workintech.s18d1.controller;
 
-import com.workintech.s18d1.dao.BurgerDaoImp;
+import com.workintech.s18d1.dao.BurgerDaoImpl;
 import com.workintech.s18d1.entity.BreadType;
 import com.workintech.s18d1.entity.Burger;
 import com.workintech.s18d1.exceptions.BurgerException;
@@ -18,13 +18,12 @@ import java.util.Optional;
 @RestController
 @Slf4j
 @NoArgsConstructor
-
 public class BurgerController {
 
-    private BurgerDaoImp burgerDaoImp;
+    private BurgerDaoImpl burgerDaoImp;
 
     @Autowired
-    public BurgerController(BurgerDaoImp burgerDaoImp) {
+    public BurgerController(BurgerDaoImpl burgerDaoImp) {
         this.burgerDaoImp = burgerDaoImp;
     }
 

@@ -19,4 +19,8 @@ public class BurgerErrorResponse {
         this.timeStamps = timeStamps;
         this.status = status.value();
     }
+
+    public BurgerErrorResponse(String message) {
+        this.message = message;
+    }
 }

@@ -5,6 +5,7 @@ import com.workintech.s18d1.entity.Burger;
 import com.workintech.s18d1.exceptions.BurgerException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,12 +17,13 @@ import java.util.List;
 
 @Repository
 @Slf4j
-public class BurgerDaoImp implements BurgerDao{
+@NoArgsConstructor
+public class BurgerDaoImpl implements BurgerDao{
 
     private EntityManager entityManager;
 
     @Autowired
-    public BurgerDaoImp(EntityManager entityManager) {
+    public BurgerDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
